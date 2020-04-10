@@ -1,0 +1,38 @@
+<div class="row">
+
+        <div class="col-md-3">
+                <div class="row">
+        
+                        <div class="col-md-12">
+                                <input type="number" #min class="form-control" placeholder="Min">
+                                <input type="number" #max class="form-control" placeholder="Max">
+                                <button (click)="handleClick()" type=”button”>Go</button>
+                        </div>
+                    </div>
+        
+            </div>
+
+    <div class="col-md-9">
+           
+        <div class="row">
+
+            <div class="col-md-4 adsItem" *ngFor="let record of records | paginate: { id: 'listing_pagination',
+            itemsPerPage: 3,
+            currentPage: page,
+            totalItems: totalRec }" >
+            <img src="{{record.image}}">
+                <h6>{{record.name}}</h6>
+               <p> Rs.{{record.price}} =>{{record.address.state}} {{record.address.city}}-{{record.address.pincode}}</p>
+               <span>Today</span>
+            </div>
+
+
+            
+
+        </div>
+        <div>
+                <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="getPage($event)"></pagination-controls>
+                </div>
+    </div>
+
+</div>

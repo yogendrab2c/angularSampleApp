@@ -1,0 +1,10 @@
+<carousel [pauseOnFocus]="true" [interval]="2000" >
+    <slide *ngFor="let slide of slides" class="carosulItem">
+      <img [src]="slide.image" alt="{{slide.title}}" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{slide.title}}</h3>
+        <p>{{slide.description}}</p>
+      </div>
+    </slide>
+   
+  </carousel>

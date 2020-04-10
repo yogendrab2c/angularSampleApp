@@ -1,0 +1,29 @@
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['/admin/category']" *ngIf="authService.loggedIn()">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav" *ngIf="authService.loggedIn()">
+        <li class="active"><a [routerLink]="['/admin/category']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" >Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">Master
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/admin/category']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">category</a></li>
+            <li><a [routerLink]="['/admin/brand']" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">Brand</a></li>
+            <li><a [routerLink]="['/admin/attributes']">Attributes</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)" *ngIf="authService.loggedIn()">Page 2</a></li>
+        <li><a href="javascript:void(0)" *ngIf="authService.loggedIn()">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="authService.loggedIn()"><a href="javascript:void(0)" (click)="onadminLogoutClick()"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+        <li *ngIf="!authService.loggedIn()"><a [routerLink]="['/admin/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav> 
+
+  

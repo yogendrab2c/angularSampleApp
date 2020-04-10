@@ -1,0 +1,16 @@
+
+  <div class="container-fluid">
+  <carousel [itemsPerSlide]="4"
+            [singleSlideOffset]="true"
+            [startFromIndex]="6"
+            [interval]="false"
+            [indicatorsByChunk]="false"
+            >
+    <slide *ngFor="let slide of mpurpose_slides; let index=index">
+      <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+      <div class="carousel-caption">
+        <h4>{{slide.title}}</h4>
+      </div>
+    </slide>
+  </carousel>
+</div>

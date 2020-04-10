@@ -1,0 +1,29 @@
+slide.active.item.carousel-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    font-weight: 400;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+.item {
+    max-width: 422px;
+    height: 234px;
+    /* background-color: powderblue; */
+}
+img {
+    max-width: 422px;
+    height: 234px;
+    object-fit: cover;
+  }
+  .carousel-control.left {
+    background-image:none !important;
+}
