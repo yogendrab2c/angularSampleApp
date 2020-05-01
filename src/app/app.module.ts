@@ -19,6 +19,19 @@ import { AuthGuard } from './guards/auth.guard';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
+export function HttpLoaderFactory(http: HttpClient) {
+  return new MultiTranslateHttpLoader(http, [
+      {prefix: "./assets/translate/about/", suffix: ".json"},
+      {prefix: "./assets/translate/header/", suffix: ".json"},
+      {prefix: "./assets/translate/home/", suffix: ".json"},
+      {prefix: "./assets/translate/contact/", suffix: ".json"},
+      {prefix: "./assets/translate/footer/", suffix: ".json"}
+  ]);
+}
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -44,7 +57,16 @@ export function provideConfig() {
     RouterModule.forRoot(routes),
     FlashMessagesModule.forRoot(),
     ModalModule.forRoot(),
-    SocialLoginModule
+    SocialLoginModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [PageService,ValidateService, AuthService, AuthGuard,ConfigService,CrudService,{
     provide: AuthServiceConfig,

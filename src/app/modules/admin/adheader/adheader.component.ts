@@ -11,9 +11,9 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 export class AdheaderComponent implements OnInit {
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router,
-    private flashMessage: FlashMessagesService) { }
+    public flashMessage: FlashMessagesService) { }
 
   ngOnInit() {
   }

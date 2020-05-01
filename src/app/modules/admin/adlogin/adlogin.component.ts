@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from 'src/app/common_service/validate.service'
 import { AuthService } from 'src/app/common_service/auth.service';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { RxwebValidators } from '@rxweb/reactive-form-validators';
 @Component({
   selector: 'app-adlogin',
   templateUrl: './adlogin.component.html',
@@ -14,7 +16,15 @@ export class AdloginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
+    private fb: FormBuilder,
     private flashMessage: FlashMessagesService) { }
+
+    loginForm = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', [
+        Validators.required
+      ]]
+    });
 
   ngOnInit() {  
     if(this.authService.loggedIn()) {
@@ -25,22 +35,22 @@ export class AdloginComponent implements OnInit {
   }
   onLoginSubmit() {
     const user = {
-      username: this.username,
-      password: this.password
+      email: this.loginForm.controls['email'].value,
+      password: this.loginForm.controls['password'].value
     }
-    if((this.username==undefined || this.username=='') || (this.password=='' || this.password==undefined)){
-      this.flashMessage.show("Fill all form details", {cssClass: 'alert-danger', timeout: 5000}); 
-    } else{
+   
       this.authService.authenticateUser(user).subscribe(data => {
         if(data.success) {
-          this.authService.storeAdminData(data.token, data.user);
-          this.flashMessage.show('You are now logged in', {cssClass: 'alert-success', timeout: 5000});
+          console.log(data.data);
+         
+          this.authService.storeAdminData(data.data.token,data.data.name);
+          this.flashMessage.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000});
           this.router.navigate(['admin/category']);
         } else {
-          this.flashMessage.show(data.msg, {cssClass: 'alert-danger', timeout: 5000});
+          this.flashMessage.show(data.msg, {cssClass: 'alert-danger', timeout: 3000});
         }
     });
-    }
+    
   
   }
   

@@ -14,6 +14,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule, MatInputModule,MatButtonModule } from '@angular/material';
 @NgModule({
   declarations: [
     AdminlayoutComponent,
@@ -31,6 +33,10 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
     ReactiveFormsModule,
     RxReactiveFormsModule,
     NgxPaginationModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     FlashMessagesModule.forRoot(),
     ModalModule.forRoot()
   ],

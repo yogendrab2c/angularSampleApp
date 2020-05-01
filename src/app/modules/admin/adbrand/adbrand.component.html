@@ -47,14 +47,15 @@
     <div class="modal-body">
       <form class="form-signin" (submit)="onAdd()" [formGroup]="brandForm" enctype="multipart/form-data">
       <div class="form-group" >
-        <label for="name">Name *</label>
-        <input type="text"
-        [class.has-error]="brandForm?.controls.name.invalid && brandForm?.controls.name.touched"
-        [class.noerror]="brandForm?.controls.name.valid && brandForm?.controls.name.touched"
-        required class="form-control has-error" placeholder="Enter Name" formControlName="name"  pattern="^[a-zA-Z0-9 ]*$">
-        <span class="help-block">Only Aphanumeric and space allowed</span>
+        <mat-form-field class="example-full-width form-group">
+            <mat-label>Name *</mat-label>
+            <input matInput placeholder="ABC" value="" type="email"  formControlName="name" name="name" pattern="^[a-zA-Z0-9 ]*$">
+          </mat-form-field>
+          <span class="help-block">Only Aphanumeric and space allowed</span>
       </div>
       <div class="form-group">
+
+        
         <label for="name">Image *</label>
         <input type="file"
         formControlName="image"

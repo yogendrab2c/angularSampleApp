@@ -15,7 +15,14 @@ import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomecarouselComponent } from 'src/app/modules/frontend/homecarousel/homecarousel.component';
 import { MultipurposesliderComponent } from 'src/app/modules/frontend/multipurposeslider/multipurposeslider.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {MultiTranslateHttpLoader} from "ngx-translate-multi-http-loader";
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -35,8 +42,16 @@ import { MultipurposesliderComponent } from 'src/app/modules/frontend/multipurpo
    RouterModule,
    NgxPaginationModule,
    FlashMessagesModule.forRoot(),
-   CarouselModule.forRoot()
+   CarouselModule.forRoot(),
+   TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient]
+    }
+  })
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],providers:[]
 })
+
 export class DefaultModule { }

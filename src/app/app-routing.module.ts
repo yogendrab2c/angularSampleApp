@@ -25,10 +25,21 @@ export const routes: Routes = [
     ]
   },
   {
+    path:'ar',component:DefaultComponent,
+    children:[
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      {path:'home',component:HomeComponent},
+      {path:'contactus',component:ContactsComponent},
+      {path:'post',component:PostComponent},
+      {path:'products',component:ProductsComponent},
+      {path:'product',component:ProductComponent}
+    ]
+  },
+  {
     path:'admin',component:AdminlayoutComponent,
     children:[
       { path: '', redirectTo: '/category', pathMatch: 'full' },
-      { path: 'login', component: AdloginComponent ,},
+      { path: 'login', component: AdloginComponent },
       {path:'category',component:AdcatComponent ,canActivate:[AuthGuard]},
       {path:'brand',component:AdbrandComponent,canActivate:[AuthGuard]},
       {path:'attributes',component:AdattrComponent,canActivate:[AuthGuard]}

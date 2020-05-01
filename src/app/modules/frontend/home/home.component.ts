@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "angularx-social-login";
+import { TranslateService } from '@ngx-translate/core';
 import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
  import { ConfigService } from '../../../common_service/ConfigService.service';
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   private loggedIn: boolean;
   constructor(
     private authService: AuthService,
+    private translate: TranslateService,
      private config: ConfigService) {
       // if (navigator.geolocation) {
       //   navigator.geolocation.getCurrentPosition((position) => {

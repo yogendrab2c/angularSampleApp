@@ -1,0 +1,27 @@
+{
+    "header":{
+        "name":"Logo",
+        "home": "Home",
+        "signup": "Signup",
+        "login": "Login",
+         "categoey":[
+            
+             {
+                "text":"Contact US",
+                "link" :"contactus"
+
+            },
+            {
+                "text":"Products",
+                "link" :"products"
+
+            },
+            {
+                "text":"POST",
+                "link" :"post"
+
+            }
+
+          ]
+    }
+}
