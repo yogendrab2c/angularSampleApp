@@ -1,30 +1,180 @@
 
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" routerLink="/{{sitelang}}/home" >{{'header.name' | translate}}</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact:true}"><a routerLink="/{{sitelang}}/home" >{{'header.home' | translate}}</a></li>
+ <div class="_sm_right_fix_social_icons">
+  <ul>
+      <li><a href="#"><img src="assets/images/facebook-white.png"></a></li>
+      <li><a href="#"><img src="assets/images/twitter-white.png"></a></li>
+      <li><a href="#"><img src="assets/images/instagram-white.png"></a></li>
+      <li><a href="#"><img src="assets/images/messanger-white.png"></a></li>
+  </ul>
+</div>
+<header class="_sm_header">
+  <div class="_sm_top_bar text-center">
+      <p><strong> {{'header.links_level.spcl_offer' | translate}} :</strong> {{'header.links_level.spcl_offer_text' | translate}} </p>
+  </div>
+  <div class="_sm_middle_bar">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-3 hidden-lg hidden-md">
+                  <div class="navbar navbar-default">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+                      </div>
+              </div>
+              <div class="col-md-3 col-xs-6">
+                  <div class="_sm_logo">
+                      <a  routerLink="/{{sitelang}}/home" >
+                          <img src="assets/images/logo.png">
+                      </a>
+                  </div>
+              </div>
+              
+              <div class="col-md-9 col-xs-3">
+                  <div class="_sm_mid_right">
+                      <ul>
 
-        <li routerLinkActive="active"
+
+                          <li *ngIf="currentlang=='ar'"><a  routerLink="/{{page}}" (click)="switchLanguage('en')"><img src="assets/images/flag-icon.jpg"></a></li>
+                          <li *ngIf="currentlang=='ar'"><a  routerLink="/{{page}}" (click)="switchLanguage('en')"><img src="assets/images/en_US.jpg"></a></li>
+
+                          <li *ngIf="currentlang=='en'"><a routerLink="/ar/{{page}}" (click)="switchLanguage('ar')"><img src="assets/images/flag-icon.jpg"></a></li>
+                          <li *ngIf="currentlang=='en'"><a routerLink="/ar/{{page}}" (click)="switchLanguage('ar')"><img src="assets/images/flag.jpg"></a></li>
+
+                          <li class="cart_top"><a href=""><img src="assets/images/cart-icon.jpg"><span>2</span></a></li>
+                          <li class="btn_contact"><a href=""><img src="assets/images/contact-icon.png"> 6960 0645,</a> <a href="#">6037 9049</a></li>
+                          <li class="btn_track"><a href=""><img src="assets/images/track-icon.png">  {{'header.links_level.order_tracking' | translate}} </a></li>
+                          <li class="btn_query"><a href=""><img src="assets/images/query-icon.png">  {{'header.links_level.send_enquiry' | translate}} </a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="_sm_nav_bar">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">   
+              <div class="row">
+                  <div class="col-md-12">
+                      
+                      <div id="navbar" class="navbar-collapse collapse">
+                          <ul class="nav navbar-nav left_menu">
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                      aria-expanded="false">Tires <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                      <li><a href="#">Car Tires</a></li>
+                                      <li><a href="#">Bike Tires</a></li>
+                                      <li><a href="#">SUV / UHP Tires</a></li>
+                                      <li><a href="#">Pick Up & Van Tires</a></li>
+                                      <li><a href="#">OFF Road Tires</a></li>
+                                      <li><a href="#">Sand Desert Tires</a></li>
+                                      <li><a href="#">Industrial Tires</a></li>
+                                      <li><a href="#">Agriculture Tires</a></li>
+                                      <li><a href="#">OTR Tires</a></li>
+                                  </ul>
+                              </li>
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                      aria-expanded="false">Car Services <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                      <li><a href="#">Car Batteries</a></li>
+                                      <li><a href="#">Brakes</a></li>
+                                      <li class="dropdown dropdown-submenu">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                              aria-expanded="false">Car Repairs </a>
+                                          <ul class="dropdown-menu">
+                                              <li><a href="#">Air Conditioner Repair</a></li>
+                                              <li><a href="#">Disc Pad Replacement</a></li>
+                                              <li><a href="#">Cooling System Repairs</a></li>
+                                              <li><a href="#">Mechanical Repairs</a></li>
+                                              <li><a href="#">Drum Brake Shoe Replacement</a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="#">Air Conditioning Service</a></li>
+                                      <li><a href="#">Suspension & Steering Service</a></li>
+                                      <li class="dropdown dropdown-submenu">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                              aria-expanded="false">Oil Change Service</a>
+                                          <ul class="dropdown-menu">
+                                              <li><a href="#">Includes Mineral/ Semi/ Full Synthetic Oil + Replace Oil Filter + Top off Fluids
+                                                      + Oil Filter + Labour</a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="#">Lights, Wipers & Accessories</a></li>
+                                      <li><a href="#">Wheel Alignment</a></li>
+                                      <li><a href="#">Wheel Balancing</a></li>
+                                      <li><a href="#">Vehicle Inspections & Reports</a></li>
+                                      <li><a href="#">Power Steering</a></li>
+                                      <li class="dropdown dropdown-submenu">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                              aria-expanded="false">More Specialized Car Services</a>
+                                          <ul class="dropdown-menu">
+                                              <li><a href="#">Timing Belt Replacement</a></li>
+                                              <li><a href="#">Engine Service</a></li>
+                                              <li><a href="#">Repair & Tune-up</a></li>
+                                              <li><a href="#">Exhaust Service & Tune</a></li>
+                                              <li><a href="#">Auto Electrical Service</a></li>
+                                              <li><a href="#">Electronic Fuel Injection</a></li>
+                                              <li><a href="#">Auto Transmission Service</a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="#">Car Wash</a></li>
+                                      <li><a href="#">Denting & Painting Services</a></li>
+                                      <li><a href="#">Car Polishing Services</a></li>
+                                  </ul>
+                              </li>
+                              <li><a href="#">Mobile Van Service</a></li>
+                              <li><a href="#">Offers</a></li>
+
+                                <li routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}"
         *ngFor="let cat of 'header.categoey' | translate">
         <a routerLink="/{{sitelang}}/{{cat.link}}" [innerHTML]="cat.text"></a>
       </li>
-       
-        <li><a [class.active]="currentlang=='en'" (click)="switchLanguage('en')" routerLink="/{{page}}">En</a></li>
-        <li><a [class.active]="currentlang=='ar'" (click)="switchLanguage('ar')" routerLink="/ar/{{page}}">Ar</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span> {{'header.signup' | translate}}</a></li>
-        <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-log-in"></span> {{'header.login' | translate}}</a></li>
-      </ul>
-    </div>
+                          </ul>
+                          <ul class="nav navbar-nav navbar-right nav-padding5 loginbtns">
+                              <li><a href="#"><img src="assets/images/location-icon.png"> {{'header.fitting_location' | translate}}</a></li>
+                              <li class="dropdown loginpart"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="assets/images/user-icon.png"> {{'header.login' | translate}} / {{'header.create_account' | translate}}</a>
+                                  <ul class="dropdown-menu">
+                                      <form action=" " method="post">
+                                          
+                                          <div class="form-group">
+                                              <label> {{'header.login_form.email_address.label' | translate}} </label>
+                                              <input type="text" class="form-control" id="email" name="phone" placeholder="{{'header.login_form.email_address.place_holder' | translate}}">
+                                          </div>
+                                          <div class="form-group">
+                                              <label>{{'header.login_form.password.label' | translate}}</label>
+                                              <input type="password" class="form-control" id="password" name="password" placeholder="{{'header.login_form.password.place_holder' | translate}}">
+                                          </div>                            
+                                          
+                                          <div class="form-group forgotbtn"><button type="submit" class="loginbtn"> {{'header.login' | translate}}</button>
+                                              <a href="forgot.html">{{'header.links_level.forget_password' | translate}}</a></div>
+                                          
+                                          <p class="account">{{'header.links_level.dont_have_an_account' | translate}}</p>
+                                          <p class="started"><a href="login.html">{{'header.links_level.get_stated_here' | translate}}</a></p>
+                                         
+                                      </form>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!--/.nav-collapse -->
+          </div>
+          <!--/.container-fluid -->
+      </nav>
+  </div>
+</header>
 
-  </nav>
+
   
 
 

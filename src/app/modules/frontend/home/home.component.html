@@ -1,17 +1,560 @@
-
-<!-- <button (click)="signInWithGoogle()" type=”button”>Login with google</button>
-<button (click)="signOut()" type=”button”>Log out</button>
-<button (click)="pay()" type=”button”>MakePayment</button> -->
-<p>{{'header.title' | translate}}</p>
-
-        <!-- <img src="{{ user.photoUrl }}">
-        <div>
-          <h4>{{ user.name }}</h4>
-          <p>{{ user.email }}</p>
-        </div> -->
-
-
-<app-homecarousel></app-homecarousel>
-
-<app-multipurposeslider></app-multipurposeslider>
+ <section class="_sm_banner regular slider">
+            <div class="_sm_bannermain" style="background: url(assets/images/banner.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                             <div class="banner_text">
+                                <h3>Easiest way to buy</h3>
+                                <h1>Tires in <span>Kuwait</span></h1>
+                                 <p>Enter your size. Compare tires. We fit them for you.</p>
+                                 <div class="findbtns">
+                                    <a id="find_tyre" class="find" href="#">Find Tyres</a>
+                                    <a id="find_service" class="find" href="#">find Car SErvices</a>
+                                 </div>
+                            </div>
+                            <div class="banner_shop" style="display:none;">
+                                <h2>Shop By</h2>
+                                <div class="form_tabs">
+                                    <ul class="nav-pills">
+                                        <li class="active"> <a href="#banner_form1" data-toggle="tab">Search by size</a></li><li><a href="#banner_form2" data-toggle="tab">Search by vehicle</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="banner_form1">
+                                            <div class="row">
+                                                <div class="col-md-9 col-xs-12">
+                                                    <div class="findtyre_form">
+                                                        <form>
+                                                        <ul>
+                                                            <li><span>Width</span> <a href="#" data-toggle="modal" data-target="#myModalprocess1"><div class="tyre_size">155</div></a></li><li><span>Height</span> <a href="#"><div class="tyre_size">155</div></a></li><li><span>Rim Size</span> <a href="#"><div class="tyre_size">155</div></a></li><li><button class="tyre_search"><i class="fa fa-search"></i></button></li>
+                                                        </ul>
+                                                        <div class="radio-tab">
+                                                            <label class="radio-inline genderChanged active" row="1">
+                                                                <input type="radio" name="gender" value="1" id="gender1" checked class="radio-menu">With Fitting
+                                                            </label>
+                                                            <label class="radio-inline genderChanged " row="2">
+                                                                <input type="radio" name="gender" value="2" id="gender2"  class="radio-menu">No Fitting
+                                                            </label>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-12 text-center p0">
+                                                    <div class="banner_form">
+                                                        <div class="form_img">
+                                                            <img src="assets/images/tireimg.png" />
+                                                        </div>
+                                                        <p>Learn how to read your tyre size</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="banner_form2">
+                                            <div class="row">
+                                                <div class="col-md-9 col-xs-12">
+                                                    <div class="findtyre_form">
+                                                        <form>
+                                                            <ul>
+                                                                <li><span>Make</span> <a href="#"><div class="tyre_size">155</div></a></li><li><span>Model</span> <a href="#"><div class="tyre_size">155</div></a></li><li><span>Year</span> <a href="#"><div class="tyre_size">155</div></a></li><li><button class="tyre_search"><i class="fa fa-search"></i></button></li>
+                                                            </ul>
+                                                            <div class="radio-tab">
+                                                                <label class="radio-inline genderChanged active" row="1">
+                                                                    <input type="radio" name="gender" value="1" id="gender1" checked class="radio-menu">With Fitting
+                                                                </label>
+                                                                <label class="radio-inline genderChanged " row="2">
+                                                                    <input type="radio" name="gender" value="2" id="gender2"  class="radio-menu">No Fitting
+                                                                </label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-xs-12 text-center p0">
+                                                    <div class="banner_form">
+                                                        <div class="form_img">
+                                                            <img src="assets/images/tireimg.png" />
+                                                        </div>
+                                                        <p>Learn how to read your tyre size</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="banner_shop_service" style="display:none;">
+                                <div class="form_tabs">
+                                    <ul  class="nav-pills">
+                                        <li class="active"> <a href="#banner_service" data-toggle="tab">Our Services</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="banner_service">
+                                            <div class="banner_servicemain">
+                                                <h4>View all Services </h4>
+                                                <div id="banner_service_carousel" class="owl-carousel owl-offers owl-theme">
+                                                    <div class="item">
+                                                        <a href="#"><img src="assets/images/bannerservice1.png"></a>
+                                                        <p>Car Batteries</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#"><img src="assets/images/bannerservice1.png"></a>
+                                                        <p>Brakes</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#"><img src="assets/images/bannerservice1.png"></a>
+                                                        <p>Car Repairs</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#"><img src="assets/images/bannerservice1.png"></a>
+                                                        <p>Air Conditioning Service</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#"><img src="assets/images/bannerservice1.png"></a>
+                                                        <p>Suspension & Steering Service</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<img class="img-responsive" src="assets/images/banner.jpg">-->
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+    
+        <section class="_sm_how_it_works bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 hidden-xs">
+                        <div class="_sm_howitworks">
+                            <div class="_sm_work_box">
+                                <img src="assets/images/works-tyre-icon.png">
+                                <h2>Select <br>Your Tyres</h2>
+                                <p>from our webiste</p>
+                            </div>
+                            <div class="_sm_work_box">
+                                <img src="assets/images/works-icon-gear.png">
+                                <h2>Select <br>Installer</h2>
+                                <p>and time for fitting</p>
+                            </div>
+                            <div class="_sm_work_box">
+                                <img src="assets/images/works-icon-order.png">
+                                <h2>Order & <br>Pay Online</h2>
+                                <p>for your order</p>
+                            </div>
+                            <div class="_sm_work_box">
+                                <img src="assets/images/works-icon-install.png">
+                                <h2>We Install <br>Your Tyres</h2>
+                                <p>when you want them</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 hidden-sm hidden-lg">
+                        <div class="stepmain">
+                            <ul>
+                                <li>
+                                    <div class="leftpart">
+                                        <div class="stepfirst">
+                                            <span>Step</span>
+                                            <span>01</span>
+                                        </div>
+                                        <div class="icnpart">
+                                            <img src="assets/images/step1.png" />
+                                        </div>
+                                    </div>
+                                    <div class="rightpart">
+                                        <h1>SELECT YOUR TYRES</h1>
+                                        <p>from our website</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="leftpart">
+                                        <div class="stepfirst">
+                                            <span>Step</span>
+                                            <span>02</span>
+                                        </div>
+                                        <div class="icnpart">
+                                            <img src="assets/images/step2.png" />
+                                        </div>
+                                    </div>
+                                    <div class="rightpart">
+                                        <h1>Select Installer</h1>
+                                        <p>and time for fiting</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="leftpart">
+                                        <div class="stepfirst">
+                                            <span>Step</span>
+                                            <span>03</span>
+                                        </div>
+                                        <div class="icnpart">
+                                            <img src="assets/images/step3.png" />
+                                        </div>
+                                    </div>
+                                    <div class="rightpart">
+                                        <h1>Order & Pay Online</h1>
+                                        <p>for your order</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="leftpart">
+                                        <div class="stepfirst">
+                                            <span>Step</span>
+                                            <span>04</span>
+                                        </div>
+                                        <div class="icnpart">
+                                            <img src="assets/images/step4.png" />
+                                        </div>
+                                    </div>
+                                    <div class="rightpart">
+                                        <h1>We Install your tyres</h1>
+                                        <p>when you want them</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+     
+        
+        
+        <section class="_sm_car_services">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="sec-title">
+                            <h2><span>Car</span> Services</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">  
+                        
+                        <div id="servicetab" class="service-carousel owl-carousel owl-theme" >
+                            <div class="item hilight">
+                                <a data-servicescont="car_batteries" href="#"><h4>Car Batteries</h4></a>                            
+                            </div>
+                            <div class="item">
+                                <a data-servicescont="brakes" href="#"><h4>Brakes</h4></a>                            
+                            </div>
+                            <div class="item">
+                                <a data-servicescont="car_repairs" href="#"><h4>Car Repairs</h4></a>                            
+                            </div>
+                            <div class="item">
+                                <a data-servicescont="air_conditioning_service" href="#"><h4>Air Conditioning Service</h4></a>
+                            </div>
+                            <div class="item">
+                                <a data-servicescont="suspension_service" href="#"><h4>Suspension & Steering Service</h4></a>                            
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="tabscontent" class="_sm_servicebottom">
+                            <div id="car_batteries" class="servicescont" data-tabs="car_batteries">
+                            
+                                <div class=" ">
+                                    <div class="col-md-4 col-sm-4 col-xs-12 pdr">
+                                    <div class="_sm_servicebottom_img text-right">
+                                        <img class="hidden-xs hidden-sm" src="assets/images/triangle-left.png">
+                                        <img class="hidden-md hidden-lg" src="assets/images/mobile-triangle-left.png">
+                                    </div>                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl pdr">
+                                    <div class="_centergrey">
+                                        <p>Air Conditioner Repair</p>
+                                        <p>Disc pad Replacement</p>
+                                        <p>Cooling System Repairs</p>
+                                        <p>Mechanical Repairs</p>
+                                        <p>Drum Brake Shoe Replacement</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl">
+                                    <div class="_sm_servicebottom_img text-left">
+                                        <img class="hidden-xs hidden-sm" src="assets/images/triangle-right.png">
+                                        <img class="hidden-md hidden-lg" src="assets/images/mobile-triangle-right.png">
+                                    </div>                    
+                                </div>
+                                </div>
+                            </div>
+                            <div id="brakes" class="servicescont hide" data-tabs="brakes">
+                                <div class=" ">
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdr">
+                                    <div class="_sm_servicebottom_img text-right">
+                                        <img src="assets/images/triangle-left.png">
+                                    </div>                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl pdr">
+                                    <div class="_centergrey">
+                                        <p>Air Conditioner Repair</p>
+                                        <p>Disc pad Replacement</p>
+                                        <p>Cooling System Repairs</p>
+                                        <p>Mechanical Repairs</p>
+                                        <p>Drum Brake Shoe Replacement</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl">
+                                    <div class="_sm_servicebottom_img text-left">
+                                        <img src="assets/images/triangle-right.png">
+                                    </div>                    
+                                </div>
+                            </div>
+                            </div>
+                            <div id="car_repairs" class="servicescont hide" data-tabs="car_repairs">
+                                <div class=" ">
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdr">
+                                    <div class="_sm_servicebottom_img text-right">
+                                        <img src="assets/images/triangle-left.png">
+                                    </div>                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl pdr">
+                                    <div class="_centergrey">
+                                        <p>Air Conditioner Repair</p>
+                                        <p>Disc pad Replacement</p>
+                                        <p>Cooling System Repairs</p>
+                                        <p>Mechanical Repairs</p>
+                                        <p>Drum Brake Shoe Replacement</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl">
+                                    <div class="_sm_servicebottom_img text-left">
+                                        <img src="assets/images/triangle-right.png">
+                                    </div>                    
+                                </div>
+                            </div>
+                            </div>
+                            <div id="air_conditioning_service" class="servicescont hide" id="air_conditioning_service" data-tabs="air_conditioning_service">
+                                <div class=" ">
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdr">
+                                    <div class="_sm_servicebottom_img text-right">
+                                        <img src="assets/images/triangle-left.png">
+                                    </div>                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl pdr">
+                                    <div class="_centergrey">
+                                        <p>Air Conditioner Repair</p>
+                                        <p>Disc pad Replacement</p>
+                                        <p>Cooling System Repairs</p>
+                                        <p>Mechanical Repairs</p>
+                                        <p>Drum Brake Shoe Replacement</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl">
+                                    <div class="_sm_servicebottom_img text-left">
+                                        <img src="assets/images/triangle-right.png">
+                                    </div>                    
+                                </div>
+                            </div>
+                            </div>
+                            <div id="suspension_service" class="servicescont hide" data-tabs="suspension_service">
+                                <div class=" ">
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdr">
+                                    <div class="_sm_servicebottom_img text-right">
+                                        <img src="assets/images/triangle-left.png">
+                                    </div>                    
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl pdr">
+                                    <div class="_centergrey">
+                                        <p>Air Conditioner Repair</p>
+                                        <p>Disc pad Replacement</p>
+                                        <p>Cooling System Repairs</p>
+                                        <p>Mechanical Repairs</p>
+                                        <p>Drum Brake Shoe Replacement</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12 pdl">
+                                    <div class="_sm_servicebottom_img text-left">
+                                        <img src="assets/images/triangle-right.png">
+                                    </div>                    
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                    
+                
+            </div>
+        </section>
+    
+        
+    
+        <section class="_sm_about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-xs-5">
+                        <div class="_sm_round_img">
+                            <img src="assets/images/home-about-img.png">
+                        </div>                    
+                    </div>
+                    <div class="col-md-7 col-xs-12">
+                        <div class="sec-title1">
+                            <h2><span>About</span> SpeedMate</h2>
+                            <p>Gulf Express Company is a subsidiary company of Al Babtain Group of Companies in Kuwait...</p>
+                        </div>
+    
+                        <div class="_smAbout_right_bottom pull-right">
+                            <div class="sec-title1">
+                                <h2><span>About</span> Al Babtain Group</h2>
+                                <p>Al Babtain Group was founded in 1948 to present a model of honesty, integrity and total dedication...</p>
+                                <div class="clearfix"></div>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section class="_sm_offers bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="sec-title">
+                            <h2><span>Special</span> Offers</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="offers" class="owl-carousel owl-offers owl-theme">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/offers1.png">
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/offers2.png">
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/offers3.png">
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/offers1.png">
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/offers3.png">
+                                </a>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center mt-20">
+                        <a href="#" class="more">See all offers <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="_sm_brands">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="sec-title">
+                            <h2><span>Our Trusted</span> Brands</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="brands" class="owl-carousel owl-offers owl-theme">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand1.png">
+                                </a>
+                                
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand2.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand3.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand4.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand5.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="assets/images/brand3.png">
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center mt-20">
+                        <a href="#" class="more-black">See all Brands <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section class="_sm_instapost">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="sec-title">
+                            <h2><span>Instagram</span> Posts</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div id="instagram_carousel" class="owl-carousel owl-offers owl-theme">
+                            
+                            <div>
+                                <img src="assets/images/insta1.jpg" class="img-responsive">
+                                <div class="_sm_instapost_content">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.                        
+                                </div>
+                            </div>
+                            <div>
+                                <img src="assets/images/insta2.jpg" class="img-responsive">
+                                <div class="_sm_instapost_content">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                            <div>
+                                <img src="assets/images/insta3.jpg" class="img-responsive">
+                                <div class="_sm_instapost_content">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                            <div>
+                                <img src="assets/images/insta4.jpg" class="img-responsive">
+                                <div class="_sm_instapost_content">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <div class="col-md-12 text-center mt-20">
+                        <a href="#" class="more">See all Instagram Posts <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 

@@ -4,23 +4,42 @@
         "home": "Home",
         "signup": "Signup",
         "login": "Login",
+        "fitting_location": "Fitting Locations",
+        "create_account": "Create Account",
+        "login_form" :{
+             "email_address":{
+                 "label":"Email Address",
+                 "place_holder":"Email"
+             },
+             "password":{
+                "label":"Password",
+                "place_holder":"Password"
+             }
+        },
+        "links_level":{
+            "forget_password":"Forgot Password",
+            "login":"",
+            "signup":"",
+            "dont_have_an_account":"Don’t have an account?",
+            "get_stated_here":"Get started here.",
+            "spcl_offer":"Special Offer",
+            "spcl_offer_text":"Buy 3 Get 1 Free",
+            "order_tracking":"Order Tracking",
+            "send_enquiry":"Send Enquiry"
+         },
          "categoey":[
             
              {
-                "text":"Contact US",
-                "link" :"contactus"
-
-            },
-            {
-                "text":"Products",
-                "link" :"products"
-
-            },
-            {
-                "text":"POST",
+                "text":"About",
                 "link" :"post"
 
+            },
+             {
+                "text":"Contact",
+                "link" :"contactus"
+
             }
+            
 
           ]
     }

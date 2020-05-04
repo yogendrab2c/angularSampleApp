@@ -1,5 +1,28 @@
 {
     "footer":{
+        "news_latter_section":{
+            "title":"اشترك في النشرة الإخبارية",
+            "description":"الاشتراك في النشرة الإخبارية لدينا والحصول على التحديث",
+            "form":{
+                "email":{
+                    "label":"",
+                    "placeholder":"عنوان بريد الكتروني"
+                },
+                "button":{
+                    "label":"الإشتراك"
+                }
+            }
+        },
+        "links_label":{
+          "all_right_reserved":"كل الحقوق محفوظة",
+          "store_name":"SpeedMate",
+          "powered_by":"مشغل بواسطة",
+          "company_name":"حلول معلومات B2C",
+          "social_media":"وسائل التواصل الاجتماعي",
+          "know_us":"إعرفنا",
+          "other_links":"روابط أخرى",
+          "contact_us":"اتصل بنا"
+        },
         "title":"البرنامج التعليمي",
         "description":"Bootstrap هو إطار عمل HTML و CSS و JS الأكثر شيوعًا لتطوير المشاريع سريعة الاستجابة والمتوافقة مع الجوّال على الويب"
     }
