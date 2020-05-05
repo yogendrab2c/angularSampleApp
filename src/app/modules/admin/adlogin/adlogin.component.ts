@@ -41,7 +41,7 @@ export class AdloginComponent implements OnInit {
    
       this.authService.authenticateUser(user).subscribe(data => {
         if(data.success) {
-          console.log(data.data);
+         
          
           this.authService.storeAdminData(data.data.token,data.data.name);
           this.flashMessage.show('You are now logged in', {cssClass: 'alert-success', timeout: 3000});
